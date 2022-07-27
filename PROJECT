@@ -1,0 +1,16 @@
+domain: transwarp.io
+layout:
+- go.kubebuilder.io/v3
+projectName: demo
+repo: transwarp.io/tos/demo
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: transwarp.io
+  group: demo
+  kind: RollingMonitor
+  path: transwarp.io/tos/demo/api/v1alpha1
+  version: v1alpha1
+version: "3"
