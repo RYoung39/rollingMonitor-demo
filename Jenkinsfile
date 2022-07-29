@@ -3,7 +3,7 @@ node('slave') {
  
  stage('Clone Project') {
  echo "1. Git Clone Project To Slave"
- git url: "https://github.com/RYoung39/013-cloud-homework.git"
+ git url: "https://github.com/RYoung39/rollingMonitor-demo.git"
  }
  
 
