@@ -1,7 +1,8 @@
 apiVersion: demo.transwarp.io/v1alpha1
-kind: RollingMonitor
+kind: NJU13RollingMonitor
 metadata:
   name: rollingmonitor-sample
+  namespace: nju13
 spec:
   # Add fields here
   deploymentName: nju13-demo

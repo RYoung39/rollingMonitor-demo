@@ -6,20 +6,20 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.4.1
   creationTimestamp: null
-  name: rollingmonitors.demo.transwarp.io
+  name: nju13rollingmonitors.demo.transwarp.io
 spec:
   group: demo.transwarp.io
   names:
-    kind: RollingMonitor
-    listKind: RollingMonitorList
-    plural: rollingmonitors
-    singular: rollingmonitor
+    kind: NJU13RollingMonitor
+    listKind: NJU13RollingMonitorList
+    plural: nju13rollingmonitors
+    singular: nju13rollingmonitor
   scope: Namespaced
   versions:
   - name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: RollingMonitor is the Schema for the rollingmonitors API
+        description: NJU13RollingMonitor is the Schema for the nju13rollingmonitors API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -34,13 +34,13 @@ spec:
           metadata:
             type: object
           spec:
-            description: RollingMonitorSpec defines the desired state of RollingMonitor
+            description: NJU13RollingMonitorSpec defines the desired state of NJU13RollingMonitor
             properties:
               deploymentName:
                 type: string
             type: object
           status:
-            description: RollingMonitorStatus defines the observed state of RollingMonitor
+            description: NJU13RollingMonitorStatus defines the observed state of NJU13RollingMonitor
             type: object
         type: object
     served: true
