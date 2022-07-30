@@ -9,6 +9,7 @@ node('slave') {
 
  stage('Prepare Environment') {
  echo "2. Prepare Environment"
+ sh 'apt-get install sudo'
  sh 'sudo apt-get update'
  sh 'sudo apt install make'
  sh 'make controller-gen'

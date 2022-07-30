@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nju13-rollingmonitor-controller
+  name: nju13-rollingmonitor-controller
+  namespace: nju13
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nju13-rollingmonitor-controller
+  template:
+    metadata:
+      labels:
+        app: nju13-rollingmonitor-controller
+    spec:
+      containers:
+        - image: harbor.edu.cn/nju13/rolling-monitor:{VERSION}
+          name: rolling-monitor
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nju13-rollingmonitor-controller
+  namespace: nju13
+  labels:
+    app: nju13-rollingmonitor-controller
+spec:
+  type: NodePort
+  selector:
+    app: nju13-rollingmonitor-controller
+  ports:
+    - name: tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
