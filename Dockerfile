@@ -1,4 +1,3 @@
-COPY . .
 # Build the manager binary
 FROM golang:1.16 as builder
 
@@ -17,6 +16,7 @@ COPY api/ api/
 COPY controllers/ controllers/
 
 # Build
+COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o manager main.go
 
 # Use distroless as minimal base image to package the manager binary
